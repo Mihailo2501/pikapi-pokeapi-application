@@ -1,0 +1,17 @@
+@mixin margBottom {
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+@mixin margRightSmall {
+  & > *:not(:last-child) {
+    margin-right: 0.7rem;
+  }
+}
+
+@mixin margRightBig {
+  & > *:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}

@@ -1,0 +1,35 @@
+.grid__container {
+  height: 90vh;
+  overflow-x: hidden;
+
+  display: grid;
+  padding: 5rem 0;
+
+  // Set to auto when less than 3 items
+  grid-template-columns: repeat(auto-fit, minmax(33.5rem, 1fr));
+  gap: 5rem;
+  justify-items: center;
+  align-items: center;
+
+  @media only screen and(min-width: $bp-cards-big) {
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  }
+  @media only screen and(min-width: $bp-cards-large) {
+    grid-template-columns: repeat(auto-fit, minmax(52rem, 1fr));
+  }
+}
+
+.footer {
+  grid-column: 1 / -1;
+  order: 4;
+  align-self: flex-end;
+
+  display: flex;
+  align-items: center;
+  padding-bottom: 5rem;
+
+  @media (pointer: coarse) {
+    padding-bottom: 15rem;
+    margin-right: 3rem;
+  }
+}

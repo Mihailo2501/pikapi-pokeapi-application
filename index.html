@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="src/img/pikachu-welcome.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script defer src="src/js/controller.js"></script>
+    <title>PikaPi</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="src/img/logo.png" alt="Logo" class="header__logo" />
+      <form class="search">
+        <input
+          type="text"
+          class="search__field"
+          placeholder="Search for pokemon..."
+          spellcheck="false"
+        />
+        <button class="btn--search">
+          <svg class="search__icon">
+            <use href="src/img/icons.svg#icon-magnifying-glass"></use>
+          </svg>
+          <span>Search</span>
+        </button>
+      </form>
+    </header>
+    <main class="main container">
+      <nav class="nav">
+        <ul class="nav__links">
+          <li class="nav__item all">
+            <a href="#type-all" class="nav__link" data-type="all">All</a>
+          </li>
+          <li class="nav__item normal">
+            <a href="#type-normal" class="nav__link" data-type="normal"
+              >Normal</a
+            >
+          </li>
+          <li class="nav__item fighting">
+            <a href="#type-fighting" class="nav__link" data-type="fighting"
+              >Fighting</a
+            >
+          </li>
+          <li class="nav__item flying">
+            <a href="#type-flying" class="nav__link" data-type="flying"
+              >Flying</a
+            >
+          </li>
+          <li class="nav__item poison">
+            <a href="#type-poison" class="nav__link" data-type="poison"
+              >Poison</a
+            >
+          </li>
+          <li class="nav__item ground">
+            <a href="#type-ground" class="nav__link" data-type="ground"
+              >Ground</a
+            >
+          </li>
+          <li class="nav__item rock">
+            <a href="#type-rock" class="nav__link" data-type="rock">Rock</a>
+          </li>
+          <li class="nav__item bug">
+            <a href="#type-bug" class="nav__link" data-type="bug">Bug</a>
+          </li>
+          <li class="nav__item ghost">
+            <a href="#type-ghost" class="nav__link" data-type="ghost">Ghost</a>
+          </li>
+          <li class="nav__item steel">
+            <a href="#type-steel" class="nav__link" data-type="steel">Steel</a>
+          </li>
+          <li class="nav__item fire">
+            <a href="#type-fire" class="nav__link" data-type="fire">Fire</a>
+          </li>
+          <li class="nav__item water">
+            <a href="#type-water" class="nav__link" data-type="water">Water</a>
+          </li>
+          <li class="nav__item grass">
+            <a href="#type-grass" class="nav__link" data-type="grass">Grass</a>
+          </li>
+          <li class="nav__item electric">
+            <a href="#type-electric" class="nav__link" data-type="electric"
+              >Electric</a
+            >
+          </li>
+          <li class="nav__item psychic">
+            <a href="#type-physic" class="nav__link" data-type="psychic"
+              >Psychic</a
+            >
+          </li>
+          <li class="nav__item ice">
+            <a href="#type-ice" class="nav__link" data-type="ice">Ice</a>
+          </li>
+          <li class="nav__item dragon">
+            <a href="#type-dragon" class="nav__link" data-type="dragon"
+              >Dragon</a
+            >
+          </li>
+          <li class="nav__item dark">
+            <a href="#type-dark" class="nav__link" data-type="dark">Dark</a>
+          </li>
+          <li class="nav__item fairy">
+            <a href="#type-fairy" class="nav__link" data-type="fairy">Fairy</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="grid__container">
+        <div class="welcome">
+          <p class="welcome-text">
+            Start by searching for a pokemon, by type or name. Have fun!
+          </p>
+          <img
+            src="src/img/pikachu-welcome.png"
+            alt="Pokemon"
+            class="welcome-img"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+  <img src="src/img/pikachu-error.png" style="display: none !important" />
+  <img src="src/img/pokeball.png" style="display: none !important" />
+</html>
+
+<!-- SPINNER -->
+<!-- <div class="welcome">
+          <img src="src/img/pokeball.png" alt="Poke Ball" class="spinner">
+        </div>  -->
+
+<!-- WELCOME MESSAGE && ERROR MESSAGE -->
+<!-- <div class="welcome">
+          <p class="welcome-text">Start by searching for a pokemon, by type or name. Have fun!</p>
+          <img src="src/img/pikachu-welcome.png/img-pikachu-error.png" alt="Pokemon" class="welcome-img">
+        </div> -->
+
+<!-- FOOTER -->
+<!-- AT THE END OF CONTAINER -->
+<!-- <footer class="footer"></footer>  -->
+
+<!-- PAGINATION BUTTONS -->
+<!-- <button class="btn--prev" data-goto="1">
+            <svg>
+            <use href="src/img/icons.svg#icon-arrow-left"></use>
+          </svg>
+            <span>Page 1</span>
+          </button>
+          <button class="btn--next" data-goto="3">
+            <svg>
+            <use href="src/img/icons.svg#icon-arrow-right"></use>
+          </svg>
+            <span>Page 3</span>
+          </button> -->
+
+<!-- CARD -->
+<!-- <div class="card">
+      <div class="card__background">
+        <div class="card__background-ball">
+          <img
+            src="https://pokeres.bastionbot.org/images/pokemon/25.png"
+            alt="Pokemon"
+          />
+        </div>
+      </div>
+      <div class="card__details">
+        <h4 class="heading-quaternary">Pikachu #25</h4>
+        <span class="span__type--badge badge-electric">Electric</span>
+        <div class="card__metrics">
+          <div class="card__height">
+            <span class="span-primary">4m</span>
+            <small class="small-primary">Height</small>
+          </div>
+          <div class="card__weight">
+            <span class="span-primary">60kg</span>
+            <small class="small-primary">Weight</small>
+          </div>
+        </div>
+        <a href="#" class="btn--card"  data-id="23">Poke Stats</a>
+      </div>
+    </div>  -->
+
+<!-- POPUP -->
+<!--  <div class="popup">
+          <div class="popup__content">
+            <div class="popup__left">
+              <h2 class="heading-secondary">Pikachu #25</h2>
+              <img
+                src="https://pokeres.bastionbot.org/images/pokemon/25.png"
+                alt="Pokemon"
+              />
+              <span class="span__type--badge badge-electric">Electric</span>
+              <h4 class="heading-quaternary">Strong Against</h4>
+              <div class="popup__compare">
+                <span class="span__type--badge badge-flying">Fying</span>
+                <span class="span__type--badge badge-water">Water</span>
+                <span class="span__type--badge badge-steel">Steel</span>
+                <span class="span__type--badge badge-electric">Electric</span>
+              </div>
+              <h4 class="heading-quaternary">Evolutions</h4>
+              <div class="popup__evolutions">
+                <div class="popup__evolution">
+                  <img
+                    src="https://pokeres.bastionbot.org/images/pokemon/172.png"
+                    alt=""
+                    class="img"
+                  />
+                  <h6>Pichu #172</h6>
+                  <span class="span__type--badge badge-electric">Electric</span>
+                </div>
+                <div class="arrow"></div>
+                <div class="popup__evolution">
+                  <img
+                    src="https://pokeres.bastionbot.org/images/pokemon/25.png"
+                    alt=""
+                    class="img"
+                  />
+                  <h6>Pikachu #25</h6>
+                  <span class="span__type--badge badge-electric">Electric</span>
+                </div>
+                <div class="arrow"></div>
+                <div class="popup__evolution">
+                  <img
+                    src="https://pokeres.bastionbot.org/images/pokemon/26.png"
+                    alt=""
+                    class="img"
+                  />
+                  <h6>Raichu #26</h6>
+                  <span class="span__type--badge badge-electric">Electric</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup__right">
+              <a href="#" class="popup__close">&times;</a>
+              <h3 class="heading-tertiary">Stats</h3>
+              <div class="popup__stats">
+                <div class="popup__stat">
+                  <p class="title">Hp</p>
+                  <p class="number">35</p>
+                  <div class="popup__bar">
+                    <div class="popup__bar-stat color-40" style="width: 35px;"></div>
+                  </div>
+                </div>
+                <div class="popup__stat">
+                  <p class="title">Attack</p>
+                  <p class="number">55</p>
+                  <div class="popup__bar">
+                    <div class="popup__bar-stat color-80" style="width: 55px;"></div>
+                  </div>
+                </div>
+                <div class="popup__stat">
+                  <p class="title">Defense</p>
+                  <p class="number">40</p>
+                  <div class="popup__bar">
+                    <div class="popup__bar-stat color-40" style="width:40px;"></div>
+                  </div>
+                </div>
+                <div class="popup__stat">
+                  <p class="title">Special-Attack</p>
+                  <p class="number">50</p>
+                  <div class="popup__bar">
+                    <div class="popup__bar-stat color-80" style="width: 50px;"></div>
+                  </div>
+                </div>
+                <div class="popup__stat">
+                  <p class="title">Special-Defense</p>
+                  <p class="number">50</p>
+                  <div class="popup__bar">
+                    <div class="popup__bar-stat color-80" style="width:50px;"></div>
+                  </div>
+                </div>
+                <div class="popup__stat">
+                  <p class="title">Speed</p>
+                  <p class="number">90</p>
+                  <div class="popup__bar">
+                    <div class="popup__bar-stat color-110" style="width:90px;"></div>
+                  </div>
+                </div>
+              </div>
+              <h4 class="heading-quaternary">Weak Against</h4>
+              <div class="popup__compare">
+                <span class="span__type--badge badge-ground">Ground</span>
+                <span class="span__type--badge badge-grass">Grass</span>
+                <span class="span__type--badge badge-dragon">Dragon</span>
+              </div>
+              <h4 class="heading-quaternary">Moves</h4>
+              <div class="popup__compare">
+                <span class="span__type--move">Mega-Punch</span>
+                <span class="span__type--move">Pay-Day</span>
+                <span class="span__type--move">Thunder-Punch</span>
+                <span class="span__type--move">Slam</span>
+                <span class="span__type--move">Mega-Kick</span>
+              </div>
+            </div>
+          </div>
+        </div>  -->

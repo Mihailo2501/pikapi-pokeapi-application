@@ -1,0 +1,46 @@
+// Use this as an error also, just change img
+.welcome {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 6rem 0 2rem;
+  text-align: center;
+  color: $color-grad-2;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  font-weight: 500;
+
+  @media only screen and(max-width: $bp-smallest) {
+    font-size: 1.4rem;
+  }
+}
+
+.welcome-img {
+  height: 15rem;
+  width: 15rem;
+
+  @media only screen and(max-width: $bp-smallest) {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.spinner {
+  height: 6rem;
+  width: 6rem;
+  fill: $color-primary;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

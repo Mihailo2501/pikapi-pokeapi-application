@@ -1,0 +1,174 @@
+%btn {
+  border-radius: 10rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  svg {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: #fff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn--card {
+  @extend %btn;
+
+  &,
+  &:link,
+  &:visited {
+    color: $color-black;
+    background-color: $color-primary;
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+
+    position: relative;
+    padding: 0.8rem;
+    display: inline-block;
+    width: 55%;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-button;
+
+    // Makes button grow on hover
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &::after {
+    content: '';
+    background-color: inherit;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+.btn--search {
+  @extend %btn;
+
+  color: $color-white;
+
+  background-image: $gradient;
+
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  font-family: inherit;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem 2.5rem;
+
+    font-size: 1.3rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 0.6rem 1.3rem;
+
+    font-size: 0.9rem;
+  }
+
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  & > *:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.btn--prev,
+.btn--next {
+  @extend %btn;
+
+  color: $color-black;
+  background-image: $gradient;
+
+  display: flex;
+  align-items: center;
+
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  font-family: inherit;
+
+  @media only screen and(max-width: $bp-small) {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+.btn--prev {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  transform: translateX(-50%);
+
+  // Doesn't work
+  @media only screen and (max-width: $bp-small) {
+    transform: translateX(-10%);
+  }
+
+  svg {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    transform: translateX(-50%) scale(1.05);
+    @media only screen and (max-width: $bp-small) {
+      transform: translateX(-10%) scale(1.05);
+    }
+  }
+}
+
+.btn--next {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  transform: translateX(50%);
+
+  // Doesn't work
+  @media only screen and (max-width: $bp-small) {
+    transform: translateX(10%);
+  }
+
+  &:hover {
+    transform: translateX(50%) scale(1.05);
+    @media only screen and (max-width: $bp-small) {
+      transform: translateX(10%) scale(1.05);
+    }
+  }
+
+  svg {
+    order: 2;
+    margin-left: 1rem;
+  }
+}
