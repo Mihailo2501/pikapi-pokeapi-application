@@ -11,7 +11,9 @@ class cardView extends View {
         <div class="card__background">
           <div class="card__background-ball">
             <img
-              src="https://pokeres.bastionbot.org/images/pokemon/${data.id}.png"
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${(
+                data.id + ''
+              ).padStart(3, '0')}.png"
               alt="${data.pokemon_name}.png"
             />
           </div>

@@ -9,7 +9,6 @@ class resultsView extends View {
     this._fireElement.addEventListener('click', function (e) {
       const clicked = e.target.closest('.nav__link');
       if (!clicked) return;
-      console.log(clicked);
       const type = clicked.dataset.type;
       handler(type);
     });
@@ -23,7 +22,9 @@ class resultsView extends View {
         <div class="card__background">
           <div class="card__background-ball">
             <img
-              src="https://pokeres.bastionbot.org/images/pokemon/${el.id}.png"
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${(
+                el.id + ''
+              ).padStart(3, '0')}.png"
               alt="${el.pokemon_name}.png"
             />
           </div>

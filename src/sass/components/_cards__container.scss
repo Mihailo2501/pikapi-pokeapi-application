@@ -12,10 +12,18 @@
   align-items: center;
 
   @media only screen and(min-width: $bp-cards-big) {
-    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
   }
   @media only screen and(min-width: $bp-cards-large) {
     grid-template-columns: repeat(auto-fit, minmax(52rem, 1fr));
+  }
+
+  @media only screen and(min-width: $bp-cards-extra-large) {
+    grid-template-columns: repeat(auto-fit, minmax(63rem, 1fr));
+  }
+
+  @media only screen and(min-width: $bp-cards-huge) {
+    grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
   }
 }
 

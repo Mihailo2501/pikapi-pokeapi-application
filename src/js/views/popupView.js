@@ -59,9 +59,9 @@ class popupView extends View {
                 data.pokemon_name.slice(1)
               } #${data.id}</h2>
               <img
-                src="https://pokeres.bastionbot.org/images/pokemon/${
-                  data.id
-                }.png"
+                src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${(
+                  data.id + ''
+                ).padStart(3, '0')}.png"
                 alt="${data.pokemon_name}.png"
               />
               <div class="popup__compare">
@@ -163,12 +163,14 @@ class popupView extends View {
               </div>
               <h4 class="heading-quaternary">Moves</h4>
               <div class="popup__compare">
-                ${data.moves.map(
-                  move =>
-                    `<span class="span__type--move">${
-                      move.charAt(0).toUpperCase() + move.slice(1)
-                    }</span>`
-                )}                
+                ${data.moves
+                  .map(
+                    move =>
+                      `<span class="span__type--move">${
+                        move.charAt(0).toUpperCase() + move.slice(1)
+                      }</span>`
+                  )
+                  .join('')}                
               </div>
             </div>
           </div>
@@ -180,13 +182,15 @@ class popupView extends View {
     let html = '';
     let i = 1;
     for (const property in data.evolutions) {
+      const pokeIdString = data.evolutions[property].id + '';
       i;
       html += `
         <div class="popup__evolution">
           <img
-            src="https://pokeres.bastionbot.org/images/pokemon/${
-              data.evolutions[property].id
-            }.png"
+            src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokeIdString.padStart(
+              3,
+              '0'
+            )}.png"
             alt="${data.evolutions[property].pokemon_name}.png"
             class="img"
           />
@@ -227,3 +231,5 @@ class popupView extends View {
 }
 
 export default new popupView();
+
+//(data.evolutions[property].id).padStart(3, '0')
